@@ -5,8 +5,16 @@
     <div class="feature">
        
         <h1>Добро пожаловать в новостной блог</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cupiditate praesentium, incidunt fugiat consequatur illo nam dolores? Quisquam, voluptate sunt.</p>
-        <button class="btn btn-warning">Новости</button>
-
+        {% if news %}
+            {% for i in news %}
+                <div class="alert alert-dark">
+                    <h4>{{i.title}}</h4>
+                    <p>{{i.full_text}}</p>
+                    <p>{{i.date}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Пока нет публикаций</p>
+        {% endif %}
     </div>
 {% endblock %}

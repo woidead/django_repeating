@@ -5,7 +5,7 @@ from django.db import models
 
 class Article(models.Model):
     title = models.CharField(max_length = 50, verbose_name='Название новости')
-    anons = models.CharField(max_length = 255, verbose_name='Анонс новости')
+    anons = models.CharField('Анонс новости', max_length = 225)
     full_text = models.TextField('Новость')
     date = models.DateTimeField("Дата публикации", auto_now_add=True)
 
@@ -13,5 +13,5 @@ class Article(models.Model):
         return self.title
     
     class Meta:
-        verbose_name = 'Новость'
+        verbose_name = 'новость'
         verbose_name_plural = 'Новости'

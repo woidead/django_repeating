@@ -59,3 +59,11 @@ main .feature{
 }
 main .feature h1{font-style: 50px;}
 main .feature p {max-width: 500px; margin: 20px auto;}
+
+.alert-dark{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 25%;
+    text-align: left;
+}
