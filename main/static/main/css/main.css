@@ -67,3 +67,9 @@ main .feature p {max-width: 500px; margin: 20px auto;}
     margin: 20px 25%;
     text-align: left;
 }
+
+form{
+    margin-left: 17%;
+    width: 500px;
+    margin-top: 50px;
+}
