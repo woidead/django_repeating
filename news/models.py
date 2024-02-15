@@ -11,7 +11,11 @@ class Article(models.Model):
 
     def __str__(self) -> str:
         return self.title
-    
+
+    def get_absolute_url(self):
+        return f"/news/{self.id}"
+
+
     class Meta:
         verbose_name = 'новость'
         verbose_name_plural = 'Новости'

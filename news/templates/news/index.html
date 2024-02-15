@@ -12,6 +12,7 @@
                     <p>{{i.anons}}</p>
                     <p>{{i.date}}</p>
                     <a href="{% url 'news_detail' i.id %}"><button class="btn btn-warning">Читать подробнее</button></a>
+                    <a class="edit-icon" href="{% url 'news_update' i.id %}"><i class="fa-regular fa-pen-to-square"></i></a>
 
                 </div>
             {% endfor %}
