@@ -9,8 +9,10 @@
             {% for i in news %}
                 <div class="alert alert-dark">
                     <h4>{{i.title}}</h4>
-                    <p>{{i.full_text}}</p>
+                    <p>{{i.anons}}</p>
                     <p>{{i.date}}</p>
+                    <a href="{% url 'news_detail' i.id %}"><button class="btn btn-warning">Читать подробнее</button></a>
+
                 </div>
             {% endfor %}
         {% else %}
