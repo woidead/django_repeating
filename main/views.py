@@ -17,3 +17,6 @@ def index(request):
 
 def contact(request):
     return render(request, 'main/contact.html')
+
+def profile_view(request):
+    return render(request, 'main/profile.html')
