@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from news.models import Article
 from news.forms import ArticleForm
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import DetailView, UpdateView, DeleteView
 # Create your views here.
 
 def news_home(request):
@@ -13,10 +13,16 @@ class NewsDetailView(DetailView):
     template_name = 'news/detail_view.html'
     context_object_name = 'article'
 
-class NewsUpdatelView(UpdateView):
+class NewsUpdateView(UpdateView):
     model = Article
     template_name = 'news/create.html'
     form_class = ArticleForm
+
+
+class NewsDeleteView(DeleteView):
+    model = Article
+    success_url = '/news'
+    template_name = 'news/delete_record.html'
 
 
 def create(request):
