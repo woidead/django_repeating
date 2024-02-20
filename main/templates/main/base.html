@@ -17,12 +17,19 @@
         <span class="logo">Aziz</span>
         <h3>Навигация</h3>
         <ul>
+            <li>User {{ user }}</li>
             <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"> </i>Главная</li></a>
             <a href=""><li><i class="fa-solid fa-user"></i> </i>Про нас</li></a>
             <a href="{% url 'contact' %}"><li><i class="fa-solid fa-address-book"> </i>Контакты</li></a>
             <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper"></i>Новости</li></a>
             <a href="{% url 'create_news' %}"><li><button class="btn btn-info"><i class="fa-solid fa-plus-circle"></i>Добавить запись</button></li></a>
         </ul>
+        <p>dd</p>
+        {% if user.is_authenticated %}
+            <a href="">logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">login</a>
+        {% endif %}
     </aside>
     <main>
         {% block content %}
