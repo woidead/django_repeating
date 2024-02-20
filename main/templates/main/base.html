@@ -24,9 +24,8 @@
             <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper"></i>Новости</li></a>
             <a href="{% url 'create_news' %}"><li><button class="btn btn-info"><i class="fa-solid fa-plus-circle"></i>Добавить запись</button></li></a>
         </ul>
-        <p>dd</p>
         {% if user.is_authenticated %}
-            <a href="">logout</a>
+            <a href="{% url 'logout' %}">logout</a>
         {% else %}
             <a href="{% url 'login' %}">login</a>
         {% endif %}
