@@ -20,9 +20,3 @@ def index(request):
 def contact(request):
     return render(request, 'main/contact.html')
 
-
-
-
-def logout_view(request):
-    logout(request)
-    return redirect('profile')

@@ -34,16 +34,16 @@ class UserRegistrationForm(UserCreationForm):
         'class': 'form-control', 'type': 'email', 'placeholder': 'Введите email'
     }))
     password1 = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control', 'type': 'password', 'placeholder': 'Введите пороль'
+        'class': 'form-control', 'type': 'password', 'placeholder': 'Введите пароль'
     }))
     password2 = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control', 'type': 'password', 'placeholder': 'Подтвердите пороль'
+        'class': 'form-control', 'type': 'password', 'placeholder': 'Подтвердите пароль'
     }))
 
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
-
+ 
     def save(self, commit=True):
         user = super(UserRegistrationForm, self).save(commit=True)
         return user

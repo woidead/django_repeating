@@ -25,9 +25,4 @@ class CreateUserView(SuccessMessageMixin, CreateView):
     form_class = UserRegistrationForm
     template_name = 'users/registration.html'
     success_url = reverse_lazy('login')
-    success_message = 'Youve successfully signed up!'
-
-    def get_context_data(self, **kwargs):
-        context = super(CreateUserView, self).get_context_data()
-        context['title'] = 'Доставка еды | Регистрация'
-        return context
+    success_message = 'Вы успешно зарегались!'

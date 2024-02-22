@@ -19,7 +19,8 @@
                 {{ form.password }}
               </div>
   
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary mb-3">Submit</button> <br>
+              <a href="{% url 'registration' %}">Нет аккаунта? <br> Зарегестрироваться</a>
               
             </form>
             {% if form.non_field_errors or messages%}
@@ -35,7 +36,5 @@
                 </div>
               {% endif %}
             {% endif %}
-          <a href="{% url 'registration' %}">Нету аккаунта, Зарегестрироваться</a>
-        </form>
     </div>
 {% endblock %}

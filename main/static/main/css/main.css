@@ -53,9 +53,9 @@ main{
 main .feature{
     float: left;
     color: #fff;
-    margin-top: 100px;
-    width: 75%;
+    width: 80%;
     text-align: center;
+    margin: 100px auto 0 auto;
 }
 main .feature h1{font-style: 50px;}
 main .feature p {max-width: 500px; margin: 20px auto;}
@@ -69,9 +69,8 @@ main .feature p {max-width: 500px; margin: 20px auto;}
 }
 
 form{
-    margin-left: 17%;
     width: 500px;
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
 }
 .edit-icon{
     font-size: 30px;
