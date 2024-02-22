@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse, reverse_lazy
-from users.forms import UserLoginForm, UserRegistrationForm
+from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from users.models import User
 
 class UserLoginView(LoginView):
@@ -26,3 +26,9 @@ class CreateUserView(SuccessMessageMixin, CreateView):
     template_name = 'users/registration.html'
     success_url = reverse_lazy('login')
     success_message = 'Вы успешно зарегались!'
+
+class UserProfileView(UpdateView):
+    model = User
+    template_name = 'users/edit_profile.html'
+    form_class = UserProfileForm
+    success_url = reverse_lazy('profile')
