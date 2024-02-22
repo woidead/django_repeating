@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
 # Create your views here.
@@ -21,9 +20,7 @@ def index(request):
 def contact(request):
     return render(request, 'main/contact.html')
 
-@login_required
-def profile_view(request):
-    return render(request, 'main/profile.html')
+
 
 
 def logout_view(request):
